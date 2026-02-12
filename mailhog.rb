@@ -1,11 +1,11 @@
 class Mailhog < Formula
   desc "Web and API based SMTP testing tool with dark mode and persistent storage"
   homepage "https://github.com/OseimuohanI/MailHog"
-  version "2.0.0"
+  version "2.0.1"
   license "MIT"
 
   url "https://github.com/OseimuohanI/MailHog.git",
-      revision: "0ff62423d8b76686622bdd5ba04489020f09f6db"
+      revision: "527d7ed18fe6c1e33c4f3b9e1e9c1deec3f8d8d8"
 
   depends_on "go" => :build
 
