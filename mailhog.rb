@@ -1,16 +1,16 @@
 class Mailhog < Formula
   desc "Web and API based SMTP testing tool with dark mode and persistent storage"
   homepage "https://github.com/OseimuohanI/MailHog"
-  version "2.0.3"
+  version "2.0.4"
   license "MIT"
 
     url "https://github.com/OseimuohanI/MailHog.git",
-      revision: "74e7f3ff2a3052a1afda1ac206064a7869a67d26"
+      revision: "2f70fdeb67d00ba8f41a489495037fb4b553dd7c"
 
   depends_on "go" => :build
 
   def install
-    system "go", "build", "-o", "MailHog", "."
+    system "go", "build", "-ldflags", "-X main.version=2.0.4", "-o", "MailHog", "."
     bin.install "MailHog"
   end
 
