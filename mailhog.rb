@@ -51,6 +51,7 @@ class Mailhog < Formula
 
   service do
     run [opt_bin/"MailHog"]
+    environment_variables MH_MAILDIR_PATH: var/"mailhog/data"
     keep_alive true
     log_path var/"log/mailhog.log"
     error_log_path var/"log/mailhog.log"
