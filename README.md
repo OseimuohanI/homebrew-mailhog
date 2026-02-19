@@ -8,6 +8,11 @@ This is the Homebrew tap for the custom MailHog build with dark mode and persist
 brew tap OseimuohanI/mailhog
 brew install mailhog
 ```
+## or
+
+```bash
+brew install OseimuohanI/mailhog/mailhog
+```
 
 ## Usage
 
