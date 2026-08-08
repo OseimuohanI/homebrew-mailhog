@@ -1,26 +1,26 @@
 class Mailhog < Formula
   desc "Web and API based SMTP testing tool with dark mode and persistent storage"
   homepage "https://github.com/OseimuohanI/MailHog"
-  version "2.0.8"
+  version "2.0.10"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.8/MailHog-darwin-arm64"
-      sha256 "12945c91d9393387d9fb9ab0549526f5947be913a6856b9ae42b4b8c0fceffd6"
+      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.10/MailHog-darwin-arm64"
+      sha256 "fc156468a3eb2aad0e9429ef6523b33e115a8c2ef9aa27db20111d1ff337ff07"
     else
-      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.8/MailHog-darwin-amd64"
-      sha256 "bdd19da0ca945d85459bdafbfe5698f3566c369a90fb28bb24054a7fa7a19aad"
+      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.10/MailHog-darwin-amd64"
+      sha256 "73b0995282220ae38a5bccfbde116c8ba702f95b3e60114a0b02350ffb6bc43a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.8/MailHog-linux-arm64"
-      sha256 "6e30fdabe27d697fb6c8ae8211faf15409bfd26a528ba6377b6dd2145b59390b"
+      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.10/MailHog-linux-arm64"
+      sha256 "1bacccd9e827d857211a8581572003cb072eaa00ee83dd6dba456a223e3102ec"
     else
-      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.8/MailHog-linux-amd64"
-      sha256 "18a64803b6deb3eb88b2132cb099175defba99490e0ba3a8a3824394d55efab1"
+      url "https://github.com/OseimuohanI/MailHog/releases/download/v2.0.10/MailHog-linux-amd64"
+      sha256 "899d7efc22818b5800cc863f5cec6fc855abdfc69754dd0186b16582b03a9466"
     end
   end
 
@@ -36,7 +36,7 @@ class Mailhog < Formula
       MailHog has been installed with custom features:
       
       🌙 Dark Mode: Toggle in the web UI (top-right corner)
-      💾 Persistent Storage: Emails saved to ./MailHog/mailhog-data directory
+      💾 Persistent Storage: Emails saved to ~/MailHog/mailhog-data directory
       
       To start MailHog:
         mailhog
