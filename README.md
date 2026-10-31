@@ -1,44 +1,62 @@
-# Homebrew Tap for Custom MailHog
+# MailHog Homebrew tap
 
-This is the Homebrew tap for the custom MailHog build with dark mode and persistent storage.
+Install the MailHog fork maintained at [OseimuohanI/MailHog](https://github.com/OseimuohanI/MailHog).
 
-## Installation
+## Install
 
-```bash
-brew tap OseimuohanI/mailhog
-brew install mailhog
-```
-## or
-
-```bash
+```sh
 brew install OseimuohanI/mailhog/mailhog
 ```
 
-## Usage
+## Upgrade
 
-```bash
+```sh
+brew update
+brew upgrade OseimuohanI/mailhog/mailhog
+```
+
+If MailHog is already running as a service, restart it after upgrading:
+
+```sh
+brew services restart OseimuohanI/mailhog/mailhog
+```
+
+## Run
+
+```sh
 mailhog
 ```
 
-- SMTP Server: `localhost:1025`
-- Web UI: `http://localhost:8025`
-- Storage Directory: `./mailhog-data/`
+- SMTP: `localhost:1025`
+- Web interface: http://localhost:8025
+- Messages: `~/MailHog/mailhog-data`
+- Settings, labels, and Jim state: `~/MailHog/mailhog-state`
 
-## Features
+To start it as a background service:
 
-- 🌙 **Dark Mode**: Toggle between light and dark themes in the web UI
-- 💾 **Persistent Storage**: Emails are saved to `./mailhog-data` and persist across restarts
-- 🎨 **Custom Branding**: Links point to this custom fork
+```sh
+brew services start OseimuohanI/mailhog/mailhog
+```
 
-## Building from Source
+Version 2.1.0 includes the minimal inbox and reader, five themes, projects and tags,
+protected cleanup, repeatable SMTP scenarios, assertion and extraction APIs,
+content/link checks, and device previews with version comparisons. Cleanup is
+opt-in. Themes are in Settings; testing tools are in the header.
 
-```bash
+See the [workbench guide](https://github.com/OseimuohanI/MailHog/blob/v2.1.0/docs/WORKBENCH.md)
+and [release notes](https://github.com/OseimuohanI/MailHog/releases/tag/v2.1.0).
+
+## Build from source
+
+Requires Go 1.25 or newer:
+
+```sh
 git clone https://github.com/OseimuohanI/MailHog.git
 cd MailHog
-go build -o MailHog .
+go build -mod=vendor -o MailHog .
 ./MailHog
 ```
 
 ## License
 
-MIT License - See [LICENSE.md](https://github.com/OseimuohanI/MailHog/blob/main/LICENSE.md)
+[MIT](https://github.com/OseimuohanI/MailHog/blob/main/LICENSE.md).
